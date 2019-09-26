@@ -11,6 +11,11 @@ Inside each subdirectory, there will be an unknown amount of archive files. If t
 You can change both the number of folders and the types of files that get moved there to fit your needs. This program calls a 7zip process on each archive to copy files to their respective folders instead of a blanket unzip. This way only the files that need to be extracted are processed and the entire archive can remain intact.
 
 ## backpostZippy.exe
+To run this program, open your favorite terminal or bash emulator (PowerShell works great for Windows) and type:
+> .\backpostZippy.exe C:\path\to\top\level\directory
+
+If you modified and rebuilt the code, adjust your command accordingly.
+Special note: This version only logs when a subprocess starts. It will not log the current progress of a subprocess, so please be patient for large archives.
 
 ## Dependencies
 This program assumes you have [7-zip installed](https://www.7-zip.org/download.html), as it calls a subprocess on the executable. If your 7zip is installed in a non-native location, or you prefer to use WinRAR or some other unpacking tool, change the code accordingly where the variable 'zipExePath' is.
